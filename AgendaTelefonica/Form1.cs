@@ -85,6 +85,10 @@ namespace AgendaTelefonica
                         Principal principal = new Principal(); //instanciando formulario principal
                         this.Hide(); //ocultando formulario login
                         principal.Show(); //exibindo formulario principal
+                        
+
+
+
                     }
                     else
                     {

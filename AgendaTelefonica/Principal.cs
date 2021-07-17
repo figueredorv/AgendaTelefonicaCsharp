@@ -46,7 +46,10 @@ namespace AgendaTelefonica
         {
             carregaDados();
             Txb_nome.Focus();
-            comboBox1.Text = "Portugês";
+            comboBox1.Text = "Portugês"; // Inicializa tradução em portugûes
+           
+
+
         }
 
         private void carregaDados()
@@ -64,12 +67,16 @@ namespace AgendaTelefonica
                 {
                     try
                     {
+                        
 
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
                         for (int i = 0; i < dataTable.Rows.Count; i++)
                         {
                             dataGridView1.Rows.Add(dataTable.Rows[i][0], dataTable.Rows[i][1], dataTable.Rows[i][2], dataTable.Rows[i][3], dataTable.Rows[i][4], dataTable.Rows[i][5]);
+                            
+
+
                         }
                     }
                     catch (Exception ex)
@@ -112,7 +119,7 @@ namespace AgendaTelefonica
                 Txb_celular.Text = row.Cells[3].Value.ToString();
                 Txb_telefone.Text = row.Cells[4].Value.ToString();
                 Txb_datanascimento.Text = row.Cells[5].Value.ToString();
-
+               
 
 
 
@@ -206,6 +213,9 @@ namespace AgendaTelefonica
                         for (int i = 0; i < dataTable.Rows.Count; i++)
                         {
                             dataGridView1.Rows.Add(dataTable.Rows[i][0], dataTable.Rows[i][1], dataTable.Rows[i][2], dataTable.Rows[i][3], dataTable.Rows[i][4], dataTable.Rows[i][5]);
+                            lbl_nomeusuario.Text = dataTable.Rows[i][1].ToString();
+
+
                         }
                     }
                     catch (Exception ex)
@@ -258,7 +268,8 @@ namespace AgendaTelefonica
             bunifuLabel1.Text = "Data de nascimento";
             Txb_celular.PlaceholderText = "Celular";
             bunifuLabel3.Text = "Pesquisar pelo nome";
-            bunifuLabel3.Text = "Pesquisar pelo código";
+            bunifuLabel4.Text = "Pesquisar pelo código";
+            bunifuLabel6.Text = "Alterar idioma";
             Btn_inserir.Text = "INSERIR";
             Btn_excluir.Text = "EXCLUIR";
             bunifuButton1.Text = "ATUALIZAR";
@@ -277,7 +288,8 @@ namespace AgendaTelefonica
             bunifuLabel1.Text = "Date of birth";
             Txb_celular.PlaceholderText = "Cell";
             bunifuLabel3.Text = "Search by name";
-            bunifuLabel3.Text = "Search by code";
+            bunifuLabel4.Text = "Search by code";
+            bunifuLabel6.Text = "Change the language";
             Btn_inserir.Text = "INSERT";
             Btn_excluir.Text = "DELETE";
             bunifuButton1.Text = "UPDATE";
