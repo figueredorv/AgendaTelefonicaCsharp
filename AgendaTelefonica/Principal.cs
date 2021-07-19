@@ -44,9 +44,14 @@ namespace AgendaTelefonica
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            usuarioDAO usuarioDAO1 = new usuarioDAO();
+
             carregaDados();
             Txb_nome.Focus();
             comboBox1.Text = "Portugês"; // Inicializa tradução em portugûes
+            lbl_nomeusuario.Text = usuarioDAO1.Usuario;
+
+
            
 
 
@@ -74,8 +79,8 @@ namespace AgendaTelefonica
                         for (int i = 0; i < dataTable.Rows.Count; i++)
                         {
                             dataGridView1.Rows.Add(dataTable.Rows[i][0], dataTable.Rows[i][1], dataTable.Rows[i][2], dataTable.Rows[i][3], dataTable.Rows[i][4], dataTable.Rows[i][5]);
-                            
 
+                            
 
                         }
                     }
@@ -139,7 +144,7 @@ namespace AgendaTelefonica
                 Txb_datanascimento.Text = row.Cells[5].Value.ToString();
 
 
-
+                
 
 
             }

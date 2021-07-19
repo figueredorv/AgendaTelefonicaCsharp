@@ -79,15 +79,26 @@ namespace AgendaTelefonica
                             login = row["login"].ToString();
                             senha = row["senha"].ToString();
                             nivel = row["nivel"].ToString();
+
+                            
+
+
+
+
                         }
+
+                        usuarioDAO usuarioDAO1 = new usuarioDAO();
+
+                        usuarioDAO1.Usuario = login;
+                        usuarioDAO1.Senha = senha;
 
                         MessageBox.Show("Acessado por " + login + " com nível " + nivel);
                         Principal principal = new Principal(); //instanciando formulario principal
                         this.Hide(); //ocultando formulario login
-                        principal.Show(); //exibindo formulario principal
+                        principal.Show(); //exibindo formulario principal 
+
+
                         
-
-
 
                     }
                     else
